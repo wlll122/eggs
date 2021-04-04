@@ -17,10 +17,17 @@ module.exports = appInfo => {
 
   // add your middleware config here
   config.middleware = [];
-
+  config.view = {
+    mapping: {
+      '.html': 'ejs',
+    },
+  };
+  // 配置公共地址
+  config.url = 'http://www.phonegap100.com/';
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
+
   };
 
   return {
