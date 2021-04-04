@@ -6,4 +6,10 @@
 module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index);
+  router.get('/admin', controller.admin.index);
+  router.get('/news', controller.newsControl.index);
+  // 动态路由传值
+  router.get('/newslsit/:id', controller.newsControl.newsList);
+
+
 };

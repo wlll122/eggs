@@ -7,6 +7,10 @@ class HomeController extends Controller {
     const { ctx } = this;
     ctx.body = 'hi, egg';
   }
+  async getData() {
+    // 获取serveice 下面的数据
+    this.service.new.getNewsList();
+  }
 }
 
 module.exports = HomeController;
